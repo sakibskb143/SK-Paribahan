@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SK Paribahan</title>
+    <!-- daisy UI and tailwind cdn link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- google font raleway and inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- style css -->
+    <style>
+        .font-inter{
+            font-family: "Inter", sans-serif;
+        }
+        .font-raleway{
+            font-family: "Raleway", sans-serif;
+        }
+    </style>
+    <!-- costom color css scripts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'common-clr1': '#1DD100',
+                        'common-clr2': '#030712',
+                        'common-clr3': '#03071299',
+                    }
+                }
+            }
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <header class="container mx-auto">
+        <!-- navbar section -->
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                  <li><a class="text-xl text-[#030712B2] font-raleway font-medium ">Home</a></li>
+                  <li><a class="text-xl text-[#030712B2] font-raleway font-medium ">About</a></li>
+                  <li><a class="text-xl text-[#030712B2] font-raleway font-medium ">Destination</a></li>
+                  <li><a class="text-xl text-[#030712B2] font-raleway font-medium ">Search</a></li>
+                 
+                </ul>
+              </div>
+            <button class="bg-white">
+                <a class=" text-4xl font-raleway font-extrabold text-common-clr2 ">SK-Paribahan</a>
+            </button>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1">
+                <li><a class="text-xl text-[#030712B2] font-raleway font-medium ">Home</a></li>
+                  <li><a class="text-xl text-[#030712B2] font-raleway font-medium ">About</a></li>
+                  <li><a class="text-xl text-[#030712B2] font-raleway font-medium ">Destination</a></li>
+                  <li><a class="text-xl text-[#030712B2] font-raleway font-medium ">Search</a></li>
+                 
+              </ul>
+            </div>
+            <div class="navbar-end ">
+                <div class="flex gap-3 text-xl text-common-clr1 font-raleway font-bold rounded-lg border border-green-400 bg-green-100 px-7 py-3">
+                    <a class="">Bus</a>
+                    <img src="images/bus-icon.png" alt=""> 
+                </div>
+             
+            </div>
+          </div>
+
+    </header>
+    <main class="container mx-auto mt-7">
+        <!-- bannar section -->
+
+        <section class="mb-[120px]">
+            <div class="bg-[url(images/banner.png)] bg-no-repeat min-h-screen bg-cover rounded-3xl relative ">
+                <div class="flex flex-col justify-center items-center border min-h-screen ">
+                    <h1 class="text-4xl lg:text-6xl md:text-5xl text-white font-raleway text-center font-extrabold mb-6">End-to-End Travel with</h1><span class="text-center text-4xl lg:text-6xl md:text-5xl text-common-clr1 font-extrabold mb-4">SK Paribahan</span> 
+                    <p class="font-inter text-white text-center w-1/2 mb-8">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum itaque praesentium autem
+                        repudiandae laudantium incidunt.</p>
+                    <button class="bg-[#1DD100] px-[30px] py-[20px] text-common-clr2 rounded-xl text-center font-raleway text-xl font-bold ">Buy
+                        Tickets</button>
+                </div>
+              
+            </div>
+            <div class="flex flex-col lg:flex-row gap-7 lg:justify-center lg:items-center my-[50px]  lg:absolute lg:top-[97%] lg:left-[15%]">
+                <!--user card 1  -->
+                <div class="flex justify-center items-center p-8 gap-4  border-b-[3px] border-b-common-clr1 rounded-3xl bg-white">
+                    <img src="images/people.png" alt="">
+                    <div class="flex-col">
+                        <h1 class="font-inter font-bold text-4xl">600K+</h1>
+                        <p class="font-inter font-normal text-[18px]">Registered users</p>
+                    </div>
+
+                </div>
+                <!-- user card 2 -->
+                <div class="flex justify-center items-center p-8 gap-4  border-b-[3px] border-b-common-clr1 rounded-3xl bg-white ">
+                    <img src="images/ticket-cupon.png" alt="">
+                    <div class="flex-col">
+                        <h1 class="font-inter font-bold text-4xl">1.6 lacks</h1>
+                        <p class="font-inter font-normal text-[18px]">Tickets sold</p>
+                    </div>
+
+                </div>
+                <!-- user card 3 -->
+                <div class="flex  justify-center items-center p-8 gap-4  border-b-[3px] border-b-common-clr1 rounded-3xl bg-white"> 
+                    <img src="images/bus-icon.png" class="w-[64px]" alt="">
+                    <div class="flex-col">
+                        <h1 class="font-inter font-bold text-4xl">77K+</h1>
+                        <p class="font-inter font-normal text-[18px]">Rental partners</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="">
+            <!-- best offers section -->
+            <div>
+            <h1 class="text-4xl font-raleway text-[#030712] font-bold text-center mb-10">
+                Best offers for you
+            </h1>
+
+            <div class="flex flex-col lg:flex-row  gap-6 ">
+
+                <!-- best offers 15% off div  -->
+                
+                <div class="flex  bg-[#FFBF0F] rounded-3xl">
+                    <div class="flex flex-col justify-center  m-[50px] font-inter ">
+                        <h1 class="text-[40px]  text-[#030712CC] font-black" >15% OFF </h1>
+                        <p class="text-xl font-semibold text-[#030712CC]"> on your next purchase</p>
+                        <p class="text-[18px] font-medium text-[#03071299]">use by January 2024</p>
+                    </div>
+                    <img src="images/cupon-devider.png" alt="">
+                    <div class="flex flex-col justify-center items-center m-[50px] font-raleway">
+                        <h1 class="text-3xl  font-bold text-[#030712]" >NEW15 </h1>
+                        <p class="text-xl font-medium text-[#03071299]"> Coupon Code</p>
+                    </div>
+                </div>
+
+                 <!-- best offers 15% off div  -->
+
+                <div class="flex   bg-[#F78C9C] rounded-3xl">
+                    <div class="flex flex-col justify-center  m-[50px] font-inter ">
+                        <h1 class="text-[40px]  text-[#030712CC] font-black" >20% OFF </h1>
+                        <p class="text-xl font-semibold text-[#030712CC]"> on your next purchase</p>
+                        <p class="text-[18px] font-medium text-[#03071299]">use by January 2024</p>
+                    </div>
+                    <img src="images/cupon-devider.png" alt="">
+                    <div class="flex flex-col justify-center items-center m-[50px] font-raleway">
+                        <h1 class="text-3xl  font-bold text-[#030712]" >Couple 20 </h1>
+                        <p class="text-xl font-medium text-[#03071299]"> Coupon Code</p>
+                    </div>
+                </div>
+                <div>
+
+                </div>
+            </div>
+        </div>
+
+
+        </section >
+
+
+    </main>
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
