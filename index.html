@@ -24,6 +24,20 @@
         .font-raleway {
             font-family: "Raleway", sans-serif;
         }
+        #createList  div {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        #createList div li {
+            
+            list-style: none;
+            font-family: "Inter", sans-serif;
+            color: common-crl1;
+            font-weight: 500;
+        }
     </style>
     <!-- costom color css scripts -->
     <script>
@@ -104,7 +118,7 @@
                     <p class="font-inter text-white text-center w-1/2 mb-8">Lorem ipsum dolor sit amet consectetur,
                         adipisicing elit. Dolorum itaque praesentium autem
                         repudiandae laudantium incidunt.</p>
-                    <button
+                    <button onclick=" displayBuyticketSection()"
                         class="bg-[#1DD100] px-[30px] py-[20px] text-common-clr2 rounded-xl text-center font-raleway text-xl font-bold ">Buy
                         Tickets</button>
                 </div>
@@ -198,7 +212,7 @@
 
 
         <!--Ticket set Planning and buy section -->
-        <section class="mt-[120px]">
+        <section id="ticket-section" class="mt-[120px]">
             <div class="rounded-t-[88px] border-t-2 border-common-clr1 bg-[#F7F8F8]">
                 <!-- normal text section -->
                 <div class="flex flex-col mx-auto justify-center items-center text-center space-y-6 mt-[100px] mb-12">
@@ -536,7 +550,7 @@
 
                                 </div>
                                 <hr class="border border-dashed border-common-clr2 border-opacity-20 my-6">
-                                <div id="" class="flex justify-between items-center">
+                                <div id="createList" >
 
 
                                 </div>
@@ -547,21 +561,28 @@
                                     <h1 class="font-inter font-medium 
                                 text-common-clr2">BDT <span id="total-price">000</span></h1>
                                 </div>
+                               
                                 <div>
-
+                                    <div id="coupon-div" class="relative">
+                                        <input id="coupon" type="text" name="name" class="text-[#03071266] font-inter border border-solid border-[#0307121A] mt-4 px-6 py-5 w-full rounded-xl" id="name" placeholder="Have any coupon?">
+                                        <button id="couponApplybtn" class="absolute right-2    bottom-2 font-inter text-white bg-common-clr1 rounded-xl px-4 py-3 disabled">Apply</button>
+                                    </div>
+                                
+                                    
+                                    
                                 </div>
-                                <div class="flex justify-between items-center mt-6">
+                                <div id="discount-div" class="flex justify-between items-center mt-6 hidden">
                                     <h1 class="font-inter font-medium text-common-clr2 ">Discount Price</h1>
                                     <!-- id discount-price -->
                                     <h1 class="font-inter font-semibold 
-                                text-common-clr2">BDT <span id="discount-price">000</span></h1>
+                                text-common-clr2">BDT <span id="discount-price">0</span></h1>
                                 </div>
                                 <div class="flex justify-between items-center mt-6">
                                     <h1 class="font-inter font-medium text-common-clr2 ">
                                         Grand Total</h1>
                                     <!-- id grand total-price -->
                                     <h1 class="font-inter font-medium 
-                                text-common-clr2">BDT <span id="total-total">000</span></h1>
+                                text-common-clr2">BDT <span id="grand-total">0</span></h1>
                                 </div>
                             </div>
                             <div class="mt-6">
@@ -580,7 +601,7 @@
                                    
                                     <label for="number">
                                         <!-- bonus id number -->
-                                        <input type="number" name="name" class="text-[#03071266] font-inter border border-solid border-[#0307121A] mt-4 px-6 py-5 w-full rounded-xl" id="number" placeholder="Enter your phone number">
+                                        <input type="number" name="name" class="text-[#03071266] font-inter border border-solid border-[#0307121A] mt-4 px-6 py-5 w-full rounded-xl " id="number" placeholder="Enter your phone number">
                                     </label>
                                     
                                 </div>
@@ -594,8 +615,9 @@
                                     </label>
                                     
                                 </div>
+                                <!-- nextBtn here -->
                                 <div class="mt-6 flex justify-center items-center ">
-                                    <button class="font-raleway font-extrabold text-xl text-center bg-common-clr1 px-8 py-5 rounded-2xl w-full">Next</button>
+                                    <button id="nextBtn" class="font-raleway font-extrabold text-xl text-center bg-common-clr1 px-8 py-5 rounded-2xl w-full opacity-50 cursor-not-allowed" disabled>Next</button>
                                 </div>
                                 <div class="flex font-inter text-common-clr3 justify-around mt-6">
                                    <a href="#" class="underline">Terms and Conditions</a>
@@ -652,6 +674,9 @@
         </div>
 
     </footer>
+
+    <script src="scripts/utility.js"></script>
+    <script src="scripts/sk-paribahan.js" ></script>
 
 </body>
 
