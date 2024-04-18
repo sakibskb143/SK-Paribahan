@@ -16,29 +16,8 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <!-- style css -->
-    <style>
-        .font-inter {
-            font-family: "Inter", sans-serif;
-        }
-
-        .font-raleway {
-            font-family: "Raleway", sans-serif;
-        }
-        #createList  div {
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 16px;
-        }
-        #createList div li {
-            
-            list-style: none;
-            font-family: "Inter", sans-serif;
-            color: common-crl1;
-            font-weight: 500;
-        }
-    </style>
+    
+    <link rel="stylesheet" href="styles/style.css">
     <!-- costom color css scripts -->
     <script>
         tailwind.config = {
@@ -212,8 +191,8 @@
 
 
         <!--Ticket set Planning and buy section -->
-        <section id="ticket-section" class="mt-[120px]">
-            <div class="rounded-t-[88px] border-t-2 border-common-clr1 bg-[#F7F8F8]">
+        <section id="ticket-section" class="mt-[120px] ">
+            <div class="rounded-t-[88px] pb-[120px] border-t-2 border-common-clr1 bg-[#F7F8F8]">
                 <!-- normal text section -->
                 <div class="flex flex-col mx-auto justify-center items-center text-center space-y-6 mt-[100px] mb-12">
                     <h1 class="text-4xl font-raleway font-bold text-common-clr2 ">SK Paribahan</h1>
@@ -223,8 +202,8 @@
                 </div>
                 <!-- time schedule section -->
 
-                <div class="container mx-auto bg-white flex rounded-3xl">
-                    <div class="mr-[70px] my-[32px] ml-[32px]">
+                <div class="container mx-auto bg-white flex rounded-3xl flex flex-col lg:flex-row">
+                    <div class="mr-[70px] my-[32px] ml-[32px]  ">
                         <!-- total ticket section -->
                         <div class="flex justify-between items-center gap-[230px] ">
                             <div class="flex gap-4">
@@ -279,13 +258,13 @@
 
                         </div>
                     </div>
-                    <img src="images/info-devider.png" alt="">
-                    <div class=" my-auto mx-auto">
+                    <img class="hidden lg:block" src="images/info-devider.png" alt="">
+                    <div class=" my-auto mx-auto p-5">
                         <div class="flex flex-col justify-center items-center  space-y-5">
                             <img src="images/fare.png" alt="">
                             <!-- -----------Ticket price ----------- -->
                             <h1 class="font-raleway font-bold text-3xl"><span id="ticket-price">550</span>Taka</h1>
-                            <p class="text-2xl text-center text-[#03071299] ront-rateway font-semibold">Per Seat</p>
+                            <p class="text-2xl text-center text-[#03071299] ront-rateway font-semibold ">Per Seat</p>
                         </div>
 
                     </div>
@@ -294,9 +273,9 @@
                 </div>
 
                 <!----------   bus seat sequence   ----------->
-                <div class="container mx-auto bg-white rounded-3xl mt-6 ">
+                <div class="container mx-auto bg-white rounded-3xl mt-7">
 
-                    <div class="flex justify-start ">
+                    <div class="flex justify-center md:flex-col lg:flex-row ">
                         <div class="p-8 ">
                             <p class="text-2xl font-raleway font-semibold text-common-clr2">Select Your Seat</p>
                             <hr class="border border-dashed border-common-clr2 border-opacity-30 my-6">
@@ -317,16 +296,16 @@
 
 
                             <!--  unfinish work -->
-                            <div class="flex flex-col gap-6">
-                                <div class="flex justify-end">
+                            <div class="flex flex-col gap-6 ">
+                                <div class="flex justify-end items-center">
                                     <div class=" bg-[#0307121A] rounded-xl px-10 py-3">
                                         <img src="images/wheal.png " alt="">
                                     </div>
                                 </div>
 
                                 <!-- seat row 1  -->
-                                <div class="flex gap-8">
-                                    <div class="flex justify-center items-center">
+                                <div class="flex gap-8 ">
+                                    <div class="flex justify-ceter items-center">
                                         <h1 class=" text-[18px] font-inter font-medium  text-[#03071280] pr-4 ">A</h>
                                     </div>
                                     <div>
@@ -525,7 +504,7 @@
 
                         </div>
 
-                        <div class="p-8 w-full  border-l border-dashed border-common-clr2 border-opacity-30">
+                        <div class="p-8 w-full  ">
                             <div class="">
                                 <p class="text-2xl font-raleway font-semibold text-common-clr2">Select Your Seat</p>
                                 <hr class="border border-dashed border-common-clr2 border-opacity-30 my-6">
@@ -536,7 +515,7 @@
                                     <div class="flex gap-1 justify-center items-center">
                                         <!-- selected-seat -->
                                         <h1 class="font-inter font-medium text-common-clr2">Seat</h1>
-                                        <p class="bg-common-clr1 text-white p-2 rounded-[50%]"><span
+                                        <p class="bg-common-clr1 text-white px-2 rounded-xl"><span
                                                 id="selected-seat">0</span></p>
                                     </div>
                                     <div>
@@ -617,7 +596,7 @@
                                 </div>
                                 <!-- nextBtn here -->
                                 <div class="mt-6 flex justify-center items-center ">
-                                    <button id="nextBtn" class="font-raleway font-extrabold text-xl text-center bg-common-clr1 px-8 py-5 rounded-2xl w-full opacity-50 cursor-not-allowed" disabled>Next</button>
+                                    <button onclick="confirmation()" id="nextBtn" class="font-raleway font-extrabold text-xl text-center bg-common-clr1 px-8 py-5 rounded-2xl w-full opacity-50 cursor-not-allowed" disabled  >Next</button>
                                 </div>
                                 <div class="flex font-inter text-common-clr3 justify-around mt-6">
                                    <a href="#" class="underline">Terms and Conditions</a>
@@ -640,7 +619,7 @@
 
 
     </main>
-    <footer class="mt-12 bg-common-clr2 py-[120px]">
+    <footer class=" bg-common-clr2 py-[120px]">
 
         <div class="container mx-auto">
             <div class="flex flex-row justify-between items-center">
@@ -675,7 +654,7 @@
 
     </footer>
 
-    <script src="scripts/utility.js"></script>
+    <script src="scripts/function.js"></script>
     <script src="scripts/sk-paribahan.js" ></script>
 
 </body>

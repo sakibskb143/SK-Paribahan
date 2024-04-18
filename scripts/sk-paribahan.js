@@ -76,7 +76,7 @@ for (const targetseat of seatPlans) {
 
             applyButton.addEventListener('click', function () {
                 const couponText = inputField.value;
-                if (couponText === 'new15' || couponText === 'couple20') {
+                if (couponText === 'new15' || couponText === 'couple 20') {
                     const tprice = document.getElementById('total-price');
                     const tprices = parseInt(tprice.innerText);
                     let calculatedDiscount = couponText === 'new15' ? tprices * 0.15 : tprices * 0.20;
@@ -97,36 +97,4 @@ for (const targetseat of seatPlans) {
         }
     });
 }
-
-
-function setSeatNumber(Id, count) {
-    const remainSeats = document.getElementById(Id);
-    const remainSeat = parseInt(remainSeats.innerText);
-    remainSeats.innerText = remainSeat - count;
-
-}
-function getTotalPrice(Id) {
-    const totalPrice = document.getElementById(Id);
-    const convertTotalprice = parseInt(totalPrice.innerText);
-    const ticketPrice = getInnerTextById('ticket-price');
-    totalPrice.innerText = convertTotalprice + parseInt(ticketPrice);
-
-}
-function setGrandTotalPrice(totalId, grandId) {
-
-    document.getElementById(grandId).innerText = document.getElementById(totalId).innerText;
-}
-
-function setInnerTextbyId(Id, c) {
-    const elements = document.getElementById(Id);
-    elements.innerText = c;
-}
-function getInnerTextById(Id) {
-    const elements = document.getElementById(Id);
-    const element = elements.innerText;
-    return element;
-}
-
-
-
 

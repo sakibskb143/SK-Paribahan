@@ -1,0 +1,26 @@
+.font-inter {
+    font-family: "Inter", sans-serif;
+}
+
+.font-raleway {
+    font-family: "Raleway", sans-serif;
+}
+
+.font-roboto{
+    font-family: "Roboto", sans-serif;
+}
+
+#createList  div {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+#createList div li {
+    
+    list-style: none;
+    font-family: "Inter", sans-serif;
+    color: common-crl1;
+    font-weight: 500;
+}
